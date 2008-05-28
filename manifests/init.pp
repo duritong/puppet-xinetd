@@ -6,4 +6,15 @@
 
 
 # modules_dir { "xinetd": }
-class xinetd {}
+class xinetd {
+    package{'xinetd':
+        eunsre => present,
+    }
+
+    service{'xinetd':
+        ensure => running,
+        enable => true,
+        hasstatus => true,
+        require => Package[xinetd],
+    }
+}
