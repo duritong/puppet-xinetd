@@ -15,7 +15,7 @@
 
 class xinetd {
     package{'xinetd':
-        enusre => present,
+        ensure => present,
     }
 
     service{'xinetd':
