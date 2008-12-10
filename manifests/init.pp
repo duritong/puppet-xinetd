@@ -19,7 +19,6 @@ class xinetd {
     service{'xinetd':
         ensure => running,
         enable => true,
-        hasstatus => true,
         require => Package[xinetd],
     }
 }
