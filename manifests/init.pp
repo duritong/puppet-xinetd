@@ -11,8 +11,6 @@
 # the Free Software Foundation.
 #
 
-# modules_dir { "xinetd": }
-
 class xinetd {
     package{'xinetd':
         ensure => present,
