@@ -12,13 +12,13 @@
 #
 
 class xinetd {
-    package{'xinetd':
-        ensure => present,
-    }
+  package{'xinetd':
+    ensure => present,
+  }
 
-    service{'xinetd':
-        ensure => running,
-        enable => true,
-        require => Package[xinetd],
-    }
+  service{'xinetd':
+    ensure => running,
+    enable => true,
+    require => Package[xinetd],
+  }
 }
