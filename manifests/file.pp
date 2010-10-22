@@ -1,7 +1,7 @@
 define xinetd::file(
   $ensure = 'present',
   $source = 'absent',
-  $content = 'absent',
+  $content = 'absent'
 ){
   include ::xinetd
   file{"/etc/xinetd.d/${name}":
